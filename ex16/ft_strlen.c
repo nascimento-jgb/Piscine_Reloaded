@@ -1,20 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jonascim <jonascim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/11 15:02:20 by jonascim          #+#    #+#             */
-/*   Updated: 2023/01/11 15:02:22 by jonascim         ###   ########.fr       */
+/*   Created: 2023/01/11 15:01:42 by jonascim          #+#    #+#             */
+/*   Updated: 2023/01/11 15:01:44 by jonascim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_swap(int *a, int *b)
+int	ft_strlen(char *str)
 {
-	int	temp;
+	int	aux;
 
-	temp = *a;
-	*a = *b;
-	*b = temp;
+	aux = 0;
+	while(str[aux])
+		aux++;
+	return (aux);
 }

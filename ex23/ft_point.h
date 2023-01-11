@@ -1,20 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   ft_point.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jonascim <jonascim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/11 15:02:20 by jonascim          #+#    #+#             */
-/*   Updated: 2023/01/11 15:02:22 by jonascim         ###   ########.fr       */
+/*   Created: 2023/01/11 15:00:32 by jonascim          #+#    #+#             */
+/*   Updated: 2023/01/11 15:00:35 by jonascim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_swap(int *a, int *b)
-{
-	int	temp;
+#ifndef FT_POINT_H
+# define FT_POINT_H
 
-	temp = *a;
-	*a = *b;
-	*b = temp;
-}
+typedef struct s_point
+{
+	int	x;
+	int	y;
+}	t_point;
+
+#endif

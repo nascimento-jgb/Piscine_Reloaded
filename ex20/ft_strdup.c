@@ -1,20 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jonascim <jonascim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/11 15:02:20 by jonascim          #+#    #+#             */
-/*   Updated: 2023/01/11 15:02:22 by jonascim         ###   ########.fr       */
+/*   Created: 2023/01/11 15:00:53 by jonascim          #+#    #+#             */
+/*   Updated: 2023/01/11 15:00:54 by jonascim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_swap(int *a, int *b)
+char	*ft_strdup(char *src)
 {
-	int	temp;
+	char	*dst;
+	int		i;
 
-	temp = *a;
-	*a = *b;
-	*b = temp;
+	i = 0;
+	while (src[i])
+		i++;
+	dst = malloc(sizeof(char *) * i);
+	if (!dst)
+		return (0);
+	i = 0;
+	while (src[i])
+		dst[i] = src[i++];
+	dst[i] = '\0';
+	return (dst);
 }

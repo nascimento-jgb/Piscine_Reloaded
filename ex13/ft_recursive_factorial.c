@@ -1,20 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jonascim <jonascim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/11 15:02:20 by jonascim          #+#    #+#             */
-/*   Updated: 2023/01/11 15:02:22 by jonascim         ###   ########.fr       */
+/*   Created: 2023/01/11 15:02:02 by jonascim          #+#    #+#             */
+/*   Updated: 2023/01/11 15:02:04 by jonascim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_swap(int *a, int *b)
+int	ft_recursive_factorial(int nb)
 {
-	int	temp;
-
-	temp = *a;
-	*a = *b;
-	*b = temp;
+	if (nb < 0 || nb > 15)
+		return (0);
+	else if (nb == 0 || nb == 1)
+		return (1);
+	else
+		return (nb * ft_recursive_factorial(--nb));
 }
